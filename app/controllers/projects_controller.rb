@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
         # }
         # params[:project]
         if @project.save
+            flash[:notice] = "Project was successfully created."
             redirect_to @project
         else
             render :new, status: :unprocessable_entity
@@ -36,6 +37,7 @@ class ProjectsController < ApplicationController
     def update
         @project = Project.find(params[:id])
         if @project.update(project_params)
+            flash[:notice] = "Project was successfully updated."
             redirect_to @project
         else
             render :edit, status: :unprocessable_entity
