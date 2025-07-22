@@ -1,11 +1,7 @@
-<% content_for :title, "New todo" %>
+<div class="bg-white shadow-md rounded-lg p-6">
+  <% content_for :title, "New todo" %>
 
-<h1>New todo</h1>
+  <h1 class="text-2xl font-bold text-gray-800 mb-4">New Todo</h1>
 
-<%= render "form", todo: @todo %>
-
-<br>
-
-<div>
-  <%= link_to "Back to todos", todos_path %>
+  <%= render "form", todo: @todo %>
 </div>
