@@ -63,3 +63,5 @@ group :test do
 end
 
 gem "fiddle"
+
+gem "tailwindcss-rails", "~> 4.3"
