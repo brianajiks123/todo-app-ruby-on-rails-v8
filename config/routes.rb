@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   get "/projects/new", to: "projects#new", as: :new_project
   post "/projects", to: "projects#create"
 
-  # projects/id
+  # projects/id (READ)
   get "/projects/:id", to: "projects#show", as: :project
+
+  # projects/id/edit (UPDATE)
+  get "/projects/:id/edit", to: "projects#edit", as: :edit_project
+  patch "/projects/:id", to: "projects#update"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
