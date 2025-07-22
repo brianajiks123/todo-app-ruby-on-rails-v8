@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   resources :todos
 
-  get "/projects", to: "projects#index"
+  get "/projects", to: "projects#index", as: :projects
 
-  # project/id
+  # projects/new
+  get "/projects/new", to: "projects#new", as: :new_project
+  post "/projects", to: "projects#create"
+
+  # projects/id
   get "/projects/:id", to: "projects#show", as: :project
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
