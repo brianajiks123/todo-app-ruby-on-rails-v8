@@ -22,12 +22,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    
-    <% if flash[:notice] %>
-      <p class="flash"><%= flash[:notice] %></p>
-    <% end %>
-    
+  <body>    
     <%= yield %>
   </body>
 </html>

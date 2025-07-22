@@ -1,5 +1,9 @@
 <h1>Projects</h1>
 
+<% if flash[:notice] %>
+    <p class="flash" style="color: green"><%= flash[:notice] %></p>
+<% end %>
+
 <%= link_to 'New Project', new_project_path %><br />
 
 <ul>

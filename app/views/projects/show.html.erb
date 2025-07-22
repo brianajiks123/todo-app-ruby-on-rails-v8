@@ -1,5 +1,9 @@
 <h1><%= @project.name %></h1>
 
+<% if flash[:notice] %>
+    <p class="flash" style="color: green"><%= flash[:notice] %></p>
+<% end %>
+
 <ul>
     <% @project.todos.each do |todo| %>
         <li>
@@ -9,5 +13,9 @@
     <% end %>
 </ul>
 
-<%= link_to 'Edit', edit_project_path(@project) %>
-<%= button_to 'Delete', project_path(@project), method: :delete %>
+<div>
+    <%= link_to 'Edit Project', edit_project_path(@project) %> |
+    <%= link_to "Back to projects", projects_path %>
+
+    <%= button_to 'Delete Project', project_path(@project), method: :delete %>
+</div>
