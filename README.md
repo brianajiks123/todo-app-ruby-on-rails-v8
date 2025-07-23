@@ -1,24 +1,40 @@
-# README
+# Simple TODO App with Ruby on Rails v8.0.2 + TailwindCSS + Font Awesome v6.6.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
 
-Things you may want to cover:
+* Create, read, update and delete projects
+* Create, read, update and delete todos
 
-* Ruby version
+## Screenshots
 
-* System dependencies
+![todo-app-ruby-on-rails-v8_projects](/docs/projects/project_list.png)
+![todo-app-ruby-on-rails-v8_todos](/docs/todos/todo_list.png)
 
-* Configuration
+## Usage
 
-* Database creation
+* Clone the repository
 
-* Database initialization
+    ```bash
+    git clone https://github.com/brianajiks123/todo-app-ruby-on-rails-v8.git
+    ```
 
-* How to run the test suite
+* Install dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+    ```bash
+    cd todo-app-ruby-on-rails-v8
+    bundle install
+    ```
 
-* Deployment instructions
+* Run the application
 
-* ...
+    ```bash
+    bin/rails tailwindcss:install
+    bin/rails tailwindcss:watch
+    bin/rails server
+    ```
+
+* Visit <http://localhost:3000>
+
+## Acknowledgements
+
+* [Ruby on Rails YouTube Playlist](https://www.youtube.com/playlist?list=PLHFP2OPUpCebdA4-xR07SPpoBWVERkHR6)
